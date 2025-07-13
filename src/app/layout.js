@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
+import { ClerkProvider } from "@clerk/nextjs";
+import Layout from "./components/ui/Layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,12 +21,25 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider
+      appearance={{
+        signIn: {
+          variables: {
+            colorPrimary: '#3cb371',
+          },
+        },
+      }}>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <Toaster position="top-center" reverseOrder={false} toastOptions={{
+            duration: 3000,
+          }} />
+          <Layout />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

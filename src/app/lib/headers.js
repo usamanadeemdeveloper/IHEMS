@@ -1,0 +1,15 @@
+export const headers = [
+  { key: "id", label: "ID", width: "w-[80px]" },
+  { key: "name", label: "Name", width: "w-[270px]" },
+  { key: "pin", label: "Pin", width: "w-[80px]" },
+  { key: "color", label: "Color", width: "w-[80px]" },
+  { key: "dataType", label: "Data Type", width: "w-[120px]" },
+  { key: "units", label: "Units", width: "w-[60px]" },
+  { key: "isRaw", label: "Is Raw", width: "w-[80px]" },
+  { key: "min", label: "Min", width: "w-[120px]" },
+  { key: "max", label: "Max", width: "w-[120px]" },
+  { key: "decimals", label: "Decimals", width: "w-[100px]" },
+  { key: "defaultValue", label: "Default Value", width: "w-[120px]" },
+  { key: "automationType", label: "Automation Type", width: "w-[150px]" },
+  { key: "live", label: "Live Value", width: "w-[120px]" },
+];
