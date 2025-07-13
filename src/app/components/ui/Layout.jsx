@@ -3,7 +3,7 @@ import DrawerComponent from "../drawer";
 
 function Layout() {
   return (
-    <div className="border-b shadow-lg">
+    <div className="border-b shadow-lg pb-3">
       <DrawerComponent />
 
       {/* Top-right Auth Buttons */}
